@@ -1,0 +1,17 @@
+# localization file for Croatian.
+
+hr:
+  hello: ...Hello world
+  archives: ...archives
+  recents: ...recents
+  tags: ...tags
+  cloud: ...cloud
+  recent_c: ...recent commented posts
+  search: ...search
+  create: ...create
+  comments: ...comments
+  add_comment: ...add a comment
+  blogindex: ...Back to Blog index
+  commenter: ...commenter
+  body: ...body
+  locales: ...by languages

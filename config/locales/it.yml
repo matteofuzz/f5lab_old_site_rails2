@@ -1,0 +1,17 @@
+# localization file for Italian.
+
+it:
+  hello: Ciao mondo
+  archives: archivi
+  recents: recenti
+  tags: tags
+  cloud: cloud
+  recent_c: commentati di recente
+  search: cerca
+  create: crea
+  comments: commenti
+  add_comment: aggiungi un commento
+  blogindex: Torna alla home del Blog
+  commenter: autore
+  body: contenuto
+  locales: per lingue
