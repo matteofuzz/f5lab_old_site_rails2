@@ -5,7 +5,10 @@ F5lab site/weblog by Matteo Folin
  - technical blog / reminder
 
 TODO
- - comments with Disqus
  - upgrade to Rails3
  - change home slideshow (no horoscope but technical news/tweets... more professional)
  - end localization in HR e SLO
+ 
+DONE
+ - comments with Disqus
+
