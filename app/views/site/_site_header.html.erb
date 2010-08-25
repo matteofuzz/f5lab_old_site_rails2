@@ -1,0 +1,35 @@
+<div id="header">
+
+  <img alt="F5lab" src="/images/logo_medium.jpg" />
+
+  <div id="navbar">
+    <ul>
+      <li>
+				<%= link_to "Admin", :controller => "pages" %>
+			</li>
+      <% if @title == 'blog' %><li class="here"><% else %><li><% end %>
+				<%= link_to "Blog", :controller => "blog" %>
+			</li>
+      <% for p in @pages_of_menu %>
+      	<% if p.title == @title %><li class="here"><% else %><li><% end %>
+        <%= link_to p.title_locale.capitalize, :controller => "site", 
+																						:action => "go", 
+																						:title => p.title %>
+      	</li>
+      <% end %>
+    </ul>
+  </div>
+
+  <% if @title == 'home' %>
+    <div id="presentation">
+     <%= render :partial => "show_slide" %>
+        <%= periodically_call_remote(:update => 'presentation',
+                            				 :url => { :action => :show_slide },
+                              			 :frequency => @slide_frequency.to_f) %>
+    </div>
+    <div id="select_sequence">
+        <%= render :partial => "sequence_hover" %>
+    </div>
+  <% end %>
+
+</div>

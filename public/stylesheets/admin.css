@@ -1,0 +1,152 @@
+body{
+  margin: 0 30px 0 30px;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 80%;
+  background: white url('/images/body1.jpg') repeat-x;
+}
+ 
+ 
+/* container principale */
+#container{
+  display:block;
+  width: 960px;
+  margin: auto;
+}
+#container * p{
+  margin:6px 0;
+  }
+ 
+#top{
+  height: 30px;
+  color: #FFF;
+}
+#top p{
+  float:left;
+	margin-top: 8px;
+}
+#top p.locale{
+	float: right;
+	margin-right: 10px;
+}
+#top p.locale a{
+	color: #fff;
+	text-decoration: none;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+#top #search{
+  float:right;
+  margin-top:3px;
+}
+#top #beta{
+  position: absolute;
+  left: 0;
+}
+ 
+#header{
+  height: 170px;
+  color: #FFF;
+}
+#home #header{
+  height: 370px;
+}
+#header img{
+  float:left;
+}
+#header #navbar{
+	float:right;
+	position: relative;
+	top: 60px;
+	background: url('/images/sfondo_navbar_admin.jpg') repeat-x transparent;
+	width: 600px;
+	height: 51px;
+  
+}
+#header #navbar span{
+	color: #000;
+  float:left;
+  margin: 0;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: large;
+  line-height: 1.6em;
+	height: 51px;
+}
+#header #navbar span a{
+  color: #FFF;
+  line-height: 1.6em;
+  font-size: large;
+  text-decoration: none;
+}
+
+#header #navbar ul{
+  list-style: none;
+  margin: 0;
+}
+#header #navbar ul li{
+  display: block;
+  color: #FFF;
+  float:right;
+  padding: 0 10px;
+  height: 51px;
+}
+#header #navbar ul li:hover, #header #navbar span:hover{
+  background: url('/images/sfondo_navbar_admin_hover.jpg') repeat-x transparent;
+}
+#header #navbar ul li.here{
+  background: url('/images/sfondo_navbar_admin_here.jpg') repeat-x transparent;
+}
+#header #navbar ul li a{
+	display: block;
+  color: #FFF;
+  line-height: 1.6em;
+  font-size: large;
+  text-decoration: none;
+}
+
+#header #presentation{
+  display: none;
+}
+#home #header #presentation{
+  display: block;
+  background: url('/images/blackboard.png') center no-repeat;
+  height: 226px;
+  width: 625px;
+  margin:0 auto;
+  position: relative;
+  top:144px;
+  left:0px;
+}
+ 
+#header #slides{
+  display: none;
+}
+#home #header #slides{
+  display: block;
+  width:800px;
+  height: 260px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  text-align: center;
+}
+ 
+#content .column{
+  width: 310px;
+  float: left;
+  margin-right: 10px;
+}
+#content .column h2{
+  border-bottom: 2px solid #FB0;
+}
+ 
+#footer{
+  height: 30px;
+  background: #000;
+  clear: both;
+}
+#footer p{
+  color: #FFF;
+  font-size: 16px;
+}

@@ -1,0 +1,14 @@
+<div id="search">
+<h1>Result for <%= "\"#{@keyword}\"" %></h1>
+<ul>
+<% if @results != [] %>
+  <% @results.each do |r| %>
+    <li><%= link_to h(r[0]), r[1] %> at <%= r[1] %></li>
+  <% end %>
+<% else %>
+  <li>found nothing!</li>
+<% end %>
+</ul>
+</div>
+
+  

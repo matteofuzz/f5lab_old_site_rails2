@@ -1,0 +1,38 @@
+<h1>Editing page</h1>
+
+<%= error_messages_for :page %>
+
+<% form_for(@page) do |f| %>
+  <p>
+    <b>Language</b><br />
+    <%= f.text_field :locale %>
+  </p>
+	<p>
+    <b>Title (menu reference)</b><br />
+    <%= f.text_field :title %>
+  </p>
+	<p>
+    <b>Title in locale language</b><br />
+    <%= f.text_field :title_locale %>
+  </p>
+
+  <p>
+    <b>Layout</b><br />
+    <%= f.text_field :layout %>
+	</p>
+
+
+  <p>
+    <b>Content</b><br />
+	<% use_tinymce -%>
+    <%= f.text_area :content, :class => "mce-editor" %>
+  </p>
+
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @page %> |
+<%= link_to 'Back', pages_path %>

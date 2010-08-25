@@ -1,0 +1,42 @@
+<div id="slides_controls">
+
+	<div id="player_control">
+		<%= link_to_remote image_tag("/images/icons/prev.png", :alt => 'prev'), 
+							:url => prev_slide_url,
+							:update => 'presentation',
+							:loading => "cancel_effects()" %>
+		<%= link_to_remote image_tag("/images/icons/pause_play.png", :alt => 'pause/play'), 
+							:url => pause_play_url,
+							:update => 'presentation',
+							:loading => "cancel_effects()" %>
+		<%= link_to_remote image_tag("/images/icons/next.png", :alt => 'next'), 
+							:url => next_slide_url,
+							:update => 'presentation',
+							:loading => "cancel_effects()" %>
+	</div>
+
+	<% form_tag url_for(:controller => 'site', :action => 'go') do %>
+	  <div id='fieldsetdiv'>
+	    <% field_set_tag 'sequence' do %>
+	        <% if @sequence == 'default' %>
+	            <%= radio_button_tag 'sequence', 'default', 'true' %> default<br />
+	        <% else %>
+	            <%= radio_button_tag 'sequence', 'default' %> default<br />
+	        <% end %>
+	        <% if @sequence == 'horoscopes' %>
+	            <%= radio_button_tag 'sequence', 'horoscopes', 'true' %> horoscop<br />
+	        <% else %>
+	            <%= radio_button_tag 'sequence', 'horoscopes' %> horoscop<br />
+	        <% end %>
+		<% end %>
+	    <% field_set_tag 'seconds' do %>
+	        <%= text_field_tag('slide_frequency', @slide_frequency, :size => 7) %>
+	    <% end %>
+	  </div>
+	  <div id='submitdiv'>
+	    <%= submit_tag "Change" %>
+	  </div>
+		<div class='clear'></div>
+	<% end %>
+
+</div>

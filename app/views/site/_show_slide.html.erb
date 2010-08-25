@@ -1,0 +1,33 @@
+<script type="text/javascript">
+//<![CDATA[
+	function appear_fade(id,appear_time,show_time,fade_time){
+		Effect.Appear(id, {duration:appear_time});
+		fadeDelay = Effect.Fade.delay(show_time, id, {duration:fade_time});
+	}
+	function cancel_effects(){
+		window.clearTimeout(fadeDelay);
+		var queue = Effect.Queues.get('global');
+		queue.each(function(effect) { effect.cancel(); });
+		new Effect.Opacity('slides', 1.0);
+		return false;
+	}
+//]]>
+</script>
+
+<% if session[:player_status]=='PLAY' %>
+	<div id="slides" style="display: none" onload>
+		<%= image_tag "#{@slide}" %>
+	</div>
+
+	<script type="text/javascript">
+	//<![CDATA[
+		appear_fade('slides', <%= @appear_time %>, <%= @show_time %>, <%= @fade_time %>);
+	//]]>
+	</script>
+
+<% else %>
+	<div id="slides" onload>
+		<%= image_tag "#{@slide}" %>
+	</div>
+	<%= render :partial => 'player_status' %>
+<% end %>

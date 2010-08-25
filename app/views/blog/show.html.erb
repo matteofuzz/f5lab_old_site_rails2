@@ -1,0 +1,46 @@
+<h1>F5blog</h1>
+<div id="blog_post" class="blog post">
+    <h2>
+			<%= @post.title %>
+			<span class="subtitle">
+				( 
+				<% if @post.locale %>
+					<%= image_tag("/images/icons/flags/"+@post.locale+".png", :alt => @post.locale, :border => 0 ) %>
+				<% end %>
+				<%= @post.author %> - 
+				<%= @post.created_at.strftime("%d/%m/%y") %> - 
+				Tags: <% @post.tags.each do |t| %>
+					<%=h t.name %>
+					<% end %> 
+				)
+			</span>
+		</h2>
+		
+    <p><%= @post.content %></p>
+
+		<div class="blog comments"
+			<b><%= I18n.t(:comments).capitalize %>:</b><br />
+			<ul>
+				<% @post.comments.each do |c| %>
+				<li>
+					<b><%=h c.commenter %>:</b> 
+					<%=h c.body %>
+				</li>
+				<% end %> 
+				<li>
+					<% comment = @post.comments.build %>
+					<% form_for([@post, comment]) do |f| %>  
+						<%= f.error_messages %>  
+						<p> <%= f.label I18n.t(:commenter) %><br /> <%= f.text_field :commenter %> </p>  
+						<p> <%= f.label I18n.t(:body) %> <br /> <%= f.text_area :body, :size => "40x5" %> </p>
+						<input type="hidden" id="origin" name="origin" value="blog" />						
+						<p> <%= f.submit I18n.t(:create).capitalize %>  </p> 
+					<% end %>
+				</li>
+			</ul>
+		</div>
+		<br />
+		<%= link_to 'Back to Blog index', blog_path %>
+</div> 
+
+<%= render :partial => 'sidebar' %>

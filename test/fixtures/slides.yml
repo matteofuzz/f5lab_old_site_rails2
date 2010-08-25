@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: slide one
+  text: I'm the text of slide one
+
+two:
+  title: MyString
+  text: MyText

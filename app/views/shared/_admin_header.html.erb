@@ -1,0 +1,24 @@
+<div id="header">
+  <img alt="F5lab" src="/images/logo_medium.jpg" />
+  
+  <div id="navbar">
+    <% if controller.controller_name == "login" and controller.action_name == "login" %>
+      <span><%= link_to "Back", :controller => "site", :action => "go" %></span>
+    <% else %> 
+      <span><%= User.find_by_id(session[:user_id]).name.capitalize %></span>
+      <span><%= link_to "logout", :controller => "login", :action => "logout" %></span>
+      <ul>
+        <% if controller.controller_name == "login" %><li class="here"><% else %><li><% end %>
+        <%= link_to "Users", :controller => "login" %></li>
+        <% if controller.controller_name == "slides" %><li class="here"><% else %><li><% end %>
+        <%= link_to "Slides", :controller => "slides" %></li>
+        <% if controller.controller_name == "pages" %><li class="here"><% else %><li><% end %>
+        <%= link_to "Pages", :controller => "pages" %></li>
+	      <% if controller.controller_name == "posts" %><li class="here"><% else %><li><% end %>
+       	<%= link_to "Posts", :controller => "posts" %></li>
+        <li><%= link_to "Home", :controller => "site", :action => "go", :title => "home" %></li>
+      </ul>
+    <% end %>
+  </div>
+  
+</div>

@@ -1,0 +1,135 @@
+
+--- 
+pages: 
+  columns: 
+  - id
+  - title
+  - layout
+  - content
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - home
+    - style_home
+    - "    <div id=\"content\">\r\n      <div id=\"column1\" class=\"tricolumn\">\r\n        <h2>column1</h2>\r\n        <p>BI think this project has similarities to the human genome project.\r\n        There is value and things to be learned in having a precise\r\n        functioning computer model of a human brain and even parts of a\r\n        human brain. There will be even more to learn when we can affordably\r\n        make many such models for different people. A follow on goal of the\r\n        human genome project is to sequence the genomes of 100,000 people,\r\n        which is a step towards to goal of everyone having a copy of their\r\n        personal genome.</p>\r\n      </div>\r\n      <div id=\"column2\" class=\"tricolumn\">\r\n        <h2>column2</h2>\r\n        <p>MIT researchers are visualizing telecom traffic between New York\r\n        City and the rest of the world. The project, titled New York Talk\r\n        Exchange, is part of a the new \"Design and the Elastic Mind\"\r\n        exhibition at the Museum of Modern Art. The system converts IP and\r\n        voice data traffic into several animations revealing network flow\r\n        over time between neighborhoods, international calls between more\r\n        than 100 cities, and the like. Missing from the project though is a\r\n        visualization showing the traffic routed through the NSA's\r\n        headquarters.</p>\r\n      </div>\r\n      <div id=\"column3\" class=\"tricolumn\">\r\n        <h2>column3</h2>\r\n        <p>The next step for Zettl and his colleagues is to make their\r\n        nanoradios send out information in addition to receiving it.\r\n        But Zettl says that won't be hard, since a transmitter is essentially\r\n        a receiver run in reverse. Nano transmitters could open the door to\r\n        other applications as well. For instance, Zettl suggests that\r\n        nanoradios attached to tiny chemical sensors could be implanted in\r\n        the blood vessels of patients with diabetes or other diseases.\r\n        If the sensors detect an abnormal level of insulin or some other\r\n        target compound, the transmitter could then relay the information\r\n        to a detector, or perhaps even to an implanted drug reservoir that\r\n        could release insulin or another therapeutic on cue. In fact, Zettl\r\n        says that since his paper on the nanotube radio came out in the\r\n        journal Nano Letters, he's received several calls from researchers\r\n        working on radio-based drug delivery vehicles.</p>\r\n      </div>\r\n    </div>"
+    - 2008-04-16 07:21:10.025142
+    - 2008-07-08 06:29:52.471421
+  - - "2"
+    - about
+    - ""
+    - <div id="content">  <div id="column1" class="tricolumn">  <h2>About</h2>  <p>BI think this project has similarities to the human genome project. There is value and things to be learned in having a precise functioning computer model of a human brain and even parts of a human brain. There will be even more to learn when we can affordably make many such models for different people. A follow on goal of the human genome project is to sequence the genomes of 100,000 people, which is a step towards to goal of everyone having a copy of their personal genome.</p>  </div>  <div id="column2" class="tricolumn">  <h2>...</h2>  <p>MIT researchers are visualizing telecom traffic between New York City and the rest of the world. The project, titled New York Talk Exchange, is part of a the new "Design and the Elastic Mind" exhibition at the Museum of Modern Art. The system converts IP and voice data traffic into several animations revealing network flow over time between neighborhoods, international calls between more than 100 cities, and the like. Missing from the project though is a visualization showing the traffic routed through the NSA's headquarters.</p>  </div>  <div id="column3" class="tricolumn">  <h2>...</h2>  <p>The next step for Zettl and his colleagues is to make their nanoradios send out information in addition to receiving it. But Zettl says that won't be hard, since a transmitter is essentially a receiver run in reverse. Nano transmitters could open the door to other applications as well. For instance, Zettl suggests that nanoradios attached to tiny chemical sensors could be implanted in the blood vessels of patients with diabetes or other diseases. If the sensors detect an abnormal level of insulin or some other target compound, the transmitter could then relay the information to a detector, or perhaps even to an implanted drug reservoir that could release insulin or another therapeutic on cue. In fact, Zettl says that since his paper on the nanotube radio came out in the journal Nano Letters, he's received several calls from researchers working on radio-based drug delivery vehicles.</p>  </div>  </div>
+    - 2008-04-16 14:03:28.000259
+    - 2008-07-08 06:55:21.652126
+  - - "3"
+    - lab
+    - style_lab
+    - "<div id=\"content\">\r\n\
+      <div id=\"column1\" class=\"monocolumn\"><h2>lab</h2>\r\n\
+      <p>\r\n\
+      <ul> CI STAREBBE UN ACCORDION !\r\n\
+      <li>Site analizer</li>\r\n\
+      <li>Spiderino</li>\r\n\
+      <li>Web grapher</li>\r\n\
+      <li>Bot band</li>\r\n\
+      <li>OCR invoice (auto load in ERP)</li>\r\n\
+      (engine open source: OCRAD, GOCR e TESSERACT) (tool: OCRopus (alpha))\r\n\
+      <ol>per poter usare gli OCR open sulle fatture bisogna: <li>preparare l'immagine (facile con imagemagick)</li><li>analisi del layout (questa \xC3\xA8 la parte pi\xC3\xB9 dura... nun so)</li><li>sui singoli componenti (box) puliti gli engine dovrebbero lavorare bene</li></ol>\r\n\
+      </ul>\r\n\
+      </p>\r\n\
+      </div>\r\n\
+      </div>"
+    - 2008-04-17 01:43:41.027954
+    - 2008-07-08 06:25:16.173598
+  - - "4"
+    - photos
+    - ""
+    - |-
+      <div id="content">
+        <div id="column1" class="bicolumn">   <h2>column1</h2>
+      <table style="width:auto;">
+        <tr>
+          <td>
+            <a href="http://picasaweb.google.it/matteo.folin/FolinNovembreDicembre2007/photo#5152006148040968658">
+      <img src="http://lh3.ggpht.com/matteo.folin/R3-aS46cSdI/AAAAAAAAAPI/FdGIHISUXfk/s400/DSCF1962.JPG" />
+      </a>
+      </td>
+      </tr>
+      <tr>
+      <td style="font-family:arial,sans-serif; font-size:11px; text-align:right">Da 
+      <a href="http://picasaweb.google.it/matteo.folin/FolinNovembreDicembre2007">Folin Novembr...
+      </a>
+      </td>
+      </tr>
+      </table>
+      </div>
+      </div>
+    - 2008-04-18 04:46:00.624042
+    - 2008-07-08 06:32:00.930602
+
+--- 
+schema_info: 
+  columns: 
+  - version
+  records: 
+  - - "3"
+
+--- 
+slides: 
+  columns: 
+  - id
+  - title
+  - text
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - prova 1
+    - "Questo testo di prova forrmer\xC3\xA0 la prima slide"
+    - 2008-07-15 14:26:39.749489
+    - 2008-07-15 14:26:39.749489
+  - - "2"
+    - prova 2
+    - "E questa \xC3\xA8 la numero due !!!"
+    - 2008-07-15 14:31:39.269128
+    - 2008-07-15 14:31:39.269128
+  - - "3"
+    - Prova 3
+    - |-
+      La terza la terza la terza !!!
+      Con un a capo.
+      
+      e una riga vuota qui sopra.
+      
+      .
+    - 2008-07-16 08:12:50.596456
+    - 2008-07-16 08:12:50.596456
+
+--- 
+users: 
+  columns: 
+  - id
+  - name
+  - hashed_password
+  - salt
+  - created_at
+  - updated_at
+  records: 
+  - - "2"
+    - matteo
+    - 0dfb7d302d482c6061126c98b86efa3906917d36
+    - "-6227530480.981993640004859"
+    - 2008-07-16 13:55:50.281407
+    - 2008-07-16 13:55:50.281407
+  - - "3"
+    - robi
+    - 45af26e58785bea57cb0a34e87d654198749c8e6
+    - "-6227298580.960576113168043"
+    - 2008-07-17 15:28:27.852497
+    - 2008-07-17 15:28:27.852497
+  - - "4"
+    - ciccio
+    - 7f7fbaa21f9c97cac17bb1373020231321f6c54d
+    - "-6242385580.115906638213567"
+    - 2008-07-22 12:45:39.940842
+    - 2008-07-22 12:45:39.940842

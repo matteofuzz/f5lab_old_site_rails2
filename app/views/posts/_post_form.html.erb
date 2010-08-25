@@ -1,0 +1,41 @@
+<% @post.tags.build if @post.tags.empty? %>
+<% form_for(@post) do |f| %>
+  <%= f.error_messages %>
+
+	<p>
+    <%= f.label :locale %><br />
+    <%= f.text_field :locale %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+		<% use_tinymce -%>
+    <%= f.text_area :content, :class => "mce-editor" %>
+  </p>
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+	<% f.fields_for :tags do |tag_form| %>
+		<p>
+			<%= tag_form.label :name, 'Tag:' %>
+			<%= tag_form.text_field :name %>
+		</p>
+		<% unless tag_form.object.nil? || tag_form.object.new_record? %>
+		<p>
+			<%= tag_form.label :_delete, 'Remove:' %>
+			<%= tag_form.check_box :_delete %>
+		</p>
+		<% end %>
+	<% end %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>

@@ -1,0 +1,24 @@
+<div id="top">
+  <p>Fast and furious web development, with style...</p>
+	
+  <div id="search">
+    <% form_tag url_for(:controller => 'site', :action => 'search' ) do %>
+        <%= text_field_tag :keyword, params[:keyword] %>  
+        <%= submit_tag I18n.t(:search) %>   
+    <% end %>
+  </div>
+
+	<p class='locale'>
+		<% for loc in I18n.available_locales-[I18n.locale.to_sym] %>
+			<% params[:locale] = loc %>
+			<% link_to(params) do %>
+				<%= loc %>
+				<%= image_tag("/images/icons/flags/"+loc.to_s+".png", :alt => loc, :border => 0 ) %>
+			<% end %>
+		<% end %>
+	</p>
+	
+  <div id="beta">
+    <%= image_tag("/images/beta_06.png") %>
+  </div>
+</div>

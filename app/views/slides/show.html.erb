@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @slide.title %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @slide.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_slide_path(@slide) %> |
+<%= link_to 'Back', slides_path %>

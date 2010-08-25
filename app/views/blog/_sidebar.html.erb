@@ -1,0 +1,74 @@
+<div id="blog_sidebar">
+	
+	<div id="rss" class="blog_sidebar_element first">
+		<span class='blog_sidebar_subtitle'>
+			<%= link_to 'rss feed', :controller => 'blog', :action => 'feed', :format => 'rss' %>
+		</span>
+	</div>
+	
+	<div id="archives" class="blog_sidebar_element">
+		<span class='blog_sidebar_subtitle'><%=t :archives %>:</span>
+		<ul>
+			<% for m_y in @archives %>
+				<li>
+					<%= link_to Date::MONTHNAMES[m_y[0]]+' '+m_y[1].to_s, 
+						:action => 'show_selection', 
+						:month => m_y[0], :year => m_y[1] %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+	
+	<div id="recents" class="blog_sidebar_element">
+		<span class='blog_sidebar_subtitle'><%=t :recents %>:</span>
+		<ul>
+			<% for post in @recents do %>
+				<li><%= link_to post.title, :action => 'show', :id => post.id %></li>
+			<% end %>
+		</ul>
+	</div>
+	
+	<div id="tags" class="blog_sidebar_element">
+		<span class='blog_sidebar_subtitle'><%=t :tags %></span>
+		<ul>
+			<% for tag in @tags do %>
+				<li><%= link_to tag, :action => 'show_selection', :tag => tag %></li>
+			<% end %>
+		</ul>
+	</div>
+	
+	<div id="cloud" class="blog_sidebar_element">
+		<span class='blog_sidebar_subtitle'><%=t :cloud %>:</span>
+		<ul>
+			<% @cloud.each do |t,c| %>
+				<li><%= link_to t, { :action => 'show_selection', :tag => t }, :class => c %></li>
+			<% end %>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	
+	<div id="commented" class="blog_sidebar_element" >
+		<span class='blog_sidebar_subtitle'><%=t :recent_c %>:</span>
+		<ul>
+			<% for post in @commented do %>
+				<li><%= link_to post.title, :action => 'show', :id => post.id %></li>
+			<% end %>
+		</ul>
+	</div>
+	
+	<div id="locales" class="blog_sidebar_element" >
+		<span class='blog_sidebar_subtitle'><%=t :locales %>:</span>
+		<ul><li>
+		<% for loc in I18n.available_locales %>
+			<% link_to( { :action => 'show_selection', :loc => loc } ) do %>
+				<%= loc %>
+				<%= image_tag("/images/icons/flags/"+loc.to_s+".png", :alt => loc, :border => 0 ) %>
+			<% end %>
+		<% end %>
+		</li></ul>
+	</div>
+		
+	<div id="calendar" class="blog_sidebar_element invisible" >
+		<span class='blog_sidebar_subtitle'>calendar</span>
+	</div>
+</div>

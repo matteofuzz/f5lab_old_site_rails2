@@ -1,0 +1,21 @@
+<h1>Users:</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+ 
+<% for user in @users %>
+  <tr>
+    <td><%=h user.name %></td>
+    <td><%= link_to 'Delete', {:action => "delete_user", :id => user.id}, 
+                              :confirm => 'Are you sure?',
+                              :method => :post %></td>
+    <td><%= link_to 'Change password', {:action => "edit_password"} %>
+  </tr>
+<% end %>
+</table>
+ 
+<br />
+ 
+<%= link_to 'Add a new user', :action => "add_user" %>
