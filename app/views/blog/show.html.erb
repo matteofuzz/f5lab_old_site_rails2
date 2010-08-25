@@ -18,7 +18,14 @@
 		
     <p><%= @post.content %></p>
 
-		<div class="blog comments"
+	<!-- comments powered by Disqus -->
+		<div class="blog comments disqus">
+			<b><%= I18n.t(:comments).capitalize %>:</b><br />
+			<%= disqus_thread %>
+		</div>
+
+	<!-- old comments system 
+		<div class="blog comments">
 			<b><%= I18n.t(:comments).capitalize %>:</b><br />
 			<ul>
 				<% @post.comments.each do |c| %>
@@ -39,6 +46,8 @@
 				</li>
 			</ul>
 		</div>
+	-->
+	
 		<br />
 		<%= link_to 'Back to Blog index', blog_path %>
 </div> 

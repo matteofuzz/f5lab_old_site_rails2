@@ -61,4 +61,16 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :it
+  
+  # Configs for Disqus
+	config.after_initialize do
+		Disqus::defaults[:account] = "f5lab"
+		# so that the comments will load up in development environment
+		Disqus::defaults[:developer] = true
+		Disqus::defaults[:container_id] = "disqus_thread"
+		Disqus::defaults[:show_powered_by] = false
+	end
+
+	config.gem 'disqus' 
+	
 end

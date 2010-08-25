@@ -25,7 +25,13 @@
 			
 	    <p><%= post.content %></p>
 	
-			<div class="blog comments"
+			<div class="blog comments disqus">
+				<%= link_to("Permalink", :action => 'show', :id => post.id, :anchor => "disqus_thread") %>
+				<%= disqus_comment_counts %>
+			</div>
+			
+		<!--
+			<div class="blog comments">
 				<b><%= I18n.t(:comments).capitalize %>:</b><br />
 				<ul>
 					<% post.comments.each do |c| %>
@@ -37,6 +43,7 @@
 					<li><%= link_to I18n.t(:add_comment), :action => 'show', :id => post.id %>
 				</ul>
 			</div>
+		-->
 			<br />
 	</div>
 	<% end %>
