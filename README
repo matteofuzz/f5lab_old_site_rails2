@@ -4,6 +4,9 @@ F5lab site/weblog by Matteo Folin
  - technology testbed
  - technical blog / reminder
 
+BUGS
+ - localization on url break disqus link (every loc request result as a different post)
+
 TODO
  - upgrade to Rails3
  - change home slideshow (no horoscope but technical news/tweets... more professional)
